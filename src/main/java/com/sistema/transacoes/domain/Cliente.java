@@ -20,7 +20,7 @@ public class Cliente {
     @Column(nullable = false)
     private String email;
 
-    private Double saldo;
+    private double saldo;
 
     public Cliente() {
     }

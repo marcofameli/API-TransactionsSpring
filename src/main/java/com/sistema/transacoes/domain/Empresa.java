@@ -18,14 +18,16 @@ public class Empresa {
 
     private String nome;
     private double saldo;
+    private double taxa;
 
     public Empresa() {
     }
 
-    public Empresa(String cnpj, String nome, double saldo) {
+    public Empresa(String cnpj, String nome, double saldo, double taxa) {
         this.cnpj = cnpj;
         this.nome = nome;
         this.saldo = saldo;
+        this.taxa = taxa;
     }
 
     public Long getId() {
@@ -60,14 +62,12 @@ public class Empresa {
         this.saldo = saldo;
     }
 
-    @Override
-    public String toString() {
-        return "Empresa{" +
-                "id=" + id +
-                ", cnpj='" + cnpj + '\'' +
-                ", nome='" + nome + '\'' +
-                ", saldo=" + saldo +
-                '}';
+    public double getTaxa() {
+        return taxa;
+    }
+
+    public void setTaxa(double taxa) {
+        this.taxa = taxa;
     }
 
     @Override
@@ -76,11 +76,11 @@ public class Empresa {
         if (o == null || getClass() != o.getClass()) return false;
 
         Empresa empresa = (Empresa) o;
-        return Objects.equals(id, empresa.id) && Objects.equals(cnpj, empresa.cnpj) && Objects.equals(nome, empresa.nome);
+        return Double.compare(saldo, empresa.saldo) == 0 && Double.compare(taxa, empresa.taxa) == 0 && Objects.equals(cnpj, empresa.cnpj) && Objects.equals(nome, empresa.nome);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, cnpj);
+        return Objects.hash(cnpj, nome, saldo, taxa);
     }
 }
