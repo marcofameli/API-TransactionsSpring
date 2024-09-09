@@ -29,7 +29,7 @@ public class EmpresaService {
 
     }
 
-    public void atualizarSaldo(Long idEmpresa, Double valor) {
+    public void atualizarSaldo(Long idEmpresa, double valor) {
         Empresa empresa = empresaRepository.findById(idEmpresa)
                 .orElseThrow(() -> new IllegalArgumentException("Empresa não encontrada"));
 

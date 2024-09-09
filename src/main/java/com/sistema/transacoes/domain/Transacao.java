@@ -27,23 +27,20 @@ public class Transacao {
     public Transacao() {
     }
 
-    public Transacao(Empresa empresa, Cliente cliente, double valorFinal, LocalDateTime now, String deposito) {
-    }
-
-    public Empresa getEmpresa() {
-        return empresa;
-    }
-
-    public void setEmpresa(Empresa empresa) {
+    public Transacao(double valor, LocalDateTime data, String tipo, Empresa empresa, Cliente cliente) {
+        this.valor = valor;
+        this.data = data;
+        this.tipo = tipo;
         this.empresa = empresa;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public double getValor() {
@@ -68,5 +65,21 @@ public class Transacao {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }

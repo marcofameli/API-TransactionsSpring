@@ -25,11 +25,19 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(String nome, String cpf, Double saldo, String email) {
+    public Cliente(String nome, String cpf, double saldo, String email) {
         this.nome = nome;
         this.cpf = cpf;
         this.saldo = saldo;
         this.email = email;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
     public Long getId() {

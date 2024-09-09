@@ -1,6 +1,7 @@
 package com.sistema.transacoes.service;
 
 import com.sistema.transacoes.domain.Cliente;
+import com.sistema.transacoes.domain.Empresa;
 import com.sistema.transacoes.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,4 +30,13 @@ public class ClienteService {
         clienteRepository.deleteById(id);
     }
 
+    public void atualizarSaldo(Long idCliente, double valor) {
+        Cliente cliente = clienteRepository.findById(idCliente)
+                .orElseThrow(() -> new IllegalArgumentException("Cliente não encontrado"));
+
+        double novoSaldo = cliente.getSaldo() + valor;
+        cliente.setSaldo(novoSaldo);
+        clienteRepository.save(cliente);
+
+    }
 }

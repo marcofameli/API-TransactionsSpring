@@ -15,6 +15,8 @@ public class TransacaoService {
     private TransacaoRepository transacaoRepository;
     @Autowired
     private EmpresaService empresaService;
+    @Autowired
+    private ClienteService clienteService;
 
     public Transacao realizarDeposito(Empresa empresa, Cliente cliente, double valor) {
         double taxa = empresa.getTaxa();
@@ -22,10 +24,11 @@ public class TransacaoService {
         if (valorFinal <= 0) {
             throw new IllegalArgumentException("O valor do deposito deve ser maior que a taxa");
         }
-        Transacao transacao = new Transacao(empresa, cliente, valorFinal, LocalDateTime.now(), "Deposito");
+        Transacao transacao = new Transacao(valorFinal, LocalDateTime.now(), "Deposito", empresa, cliente);
         transacaoRepository.save(transacao);
 
         empresaService.atualizarSaldo(empresa.getId(), valorFinal);
+        clienteService.atualizarSaldo(cliente.getId(), valorFinal);
 
         return transacao;
     }
@@ -35,13 +38,12 @@ public class TransacaoService {
             throw new IllegalArgumentException("Saldo insuficiente para realizar saque");
         }
 
-        Transacao transacao = new Transacao(empresa, cliente, valor, LocalDateTime.now(), "Saque");
+        Transacao transacao = new Transacao(valor, LocalDateTime.now(), "Saque", empresa, cliente);
         transacaoRepository.save(transacao);
 
         empresaService.atualizarSaldo(empresa.getId(), -valor);
+        clienteService.atualizarSaldo(cliente.getId(), -valor);
         return transacao;
-
     }
-
 
 }

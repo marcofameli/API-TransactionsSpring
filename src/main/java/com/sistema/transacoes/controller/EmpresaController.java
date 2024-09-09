@@ -16,7 +16,7 @@ public class EmpresaController {
     private EmpresaService empresaService;
 
     @PostMapping
-    public ResponseEntity<Empresa> salvar(@RequestBody Empresa empresa) {
+    public ResponseEntity<Empresa> criar(@RequestBody Empresa empresa) {
         Empresa novaEmpresa = empresaService.criar(empresa);
         return ResponseEntity.ok(novaEmpresa);
     }

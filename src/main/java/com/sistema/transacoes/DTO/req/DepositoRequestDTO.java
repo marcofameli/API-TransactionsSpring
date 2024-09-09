@@ -5,7 +5,7 @@ public class DepositoRequestDTO {
     private Long clienteId;
     private double valor;
 
-    // Getters e Setters
+
     public Long getEmpresaId() {
         return empresaId;
     }
