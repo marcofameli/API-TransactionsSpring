@@ -1,19 +1,17 @@
-package com.sistema.transacoes.controller;
+package com.sistema.tgid.controller;
 
-import com.sistema.transacoes.DTO.req.DepositoRequestDTO;
-import com.sistema.transacoes.DTO.req.SaqueRequestDTO;
-import com.sistema.transacoes.DTO.res.TransacaoResponseDTO;
-import com.sistema.transacoes.domain.Cliente;
-import com.sistema.transacoes.domain.Empresa;
-import com.sistema.transacoes.domain.Transacao;
-import com.sistema.transacoes.service.ClienteService;
-import com.sistema.transacoes.service.EmpresaService;
-import com.sistema.transacoes.service.TransacaoService;
+import com.sistema.tgid.DTO.req.DepositoRequestDTO;
+import com.sistema.tgid.DTO.req.SaqueRequestDTO;
+import com.sistema.tgid.DTO.res.TransacaoResponseDTO;
+import com.sistema.tgid.domain.Cliente;
+import com.sistema.tgid.domain.Empresa;
+import com.sistema.tgid.domain.Transacao;
+import com.sistema.tgid.service.ClienteService;
+import com.sistema.tgid.service.EmpresaService;
+import com.sistema.tgid.service.TransacaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/transacoes")

@@ -1,4 +1,4 @@
-package com.sistema.transacoes;
+package com.sistema.tgid;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

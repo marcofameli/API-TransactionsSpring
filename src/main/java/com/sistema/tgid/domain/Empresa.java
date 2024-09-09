@@ -1,4 +1,4 @@
-package com.sistema.transacoes.domain;
+package com.sistema.tgid.domain;
 
 import jakarta.persistence.*;
 

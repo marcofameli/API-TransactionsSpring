@@ -1,7 +1,7 @@
-package com.sistema.transacoes.controller;
+package com.sistema.tgid.controller;
 
-import com.sistema.transacoes.domain.Empresa;
-import com.sistema.transacoes.service.EmpresaService;
+import com.sistema.tgid.domain.Empresa;
+import com.sistema.tgid.service.EmpresaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,17 +1,15 @@
-package com.sistema.transacoes.service;
+package com.sistema.tgid.service;
 
-import com.sistema.transacoes.domain.Cliente;
-import com.sistema.transacoes.domain.Empresa;
-import com.sistema.transacoes.domain.Transacao;
-import com.sistema.transacoes.repository.TransacaoRepository;
+import com.sistema.tgid.domain.Cliente;
+import com.sistema.tgid.domain.Empresa;
+import com.sistema.tgid.domain.Transacao;
+import com.sistema.tgid.repository.TransacaoRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-
-import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;

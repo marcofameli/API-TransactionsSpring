@@ -1,6 +1,6 @@
-package com.sistema.transacoes.repository;
+package com.sistema.tgid.repository;
 
-import com.sistema.transacoes.domain.Empresa;
+import com.sistema.tgid.domain.Empresa;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EmpresaRepository extends JpaRepository<Empresa, Long> {

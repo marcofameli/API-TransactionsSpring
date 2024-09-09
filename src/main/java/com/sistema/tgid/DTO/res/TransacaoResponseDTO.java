@@ -1,4 +1,4 @@
-package com.sistema.transacoes.DTO.res;
+package com.sistema.tgid.DTO.res;
 
 import java.time.LocalDateTime;
 

@@ -1,6 +1,6 @@
-package com.sistema.transacoes.repository;
+package com.sistema.tgid.repository;
 
-import com.sistema.transacoes.domain.Cliente;
+import com.sistema.tgid.domain.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {

@@ -1,4 +1,4 @@
-package com.sistema.transacoes;
+package com.sistema.tgid;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

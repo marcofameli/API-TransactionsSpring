@@ -1,7 +1,7 @@
-package com.sistema.transacoes.service;
+package com.sistema.tgid.service;
 
-import com.sistema.transacoes.domain.Empresa;
-import com.sistema.transacoes.repository.EmpresaRepository;
+import com.sistema.tgid.domain.Empresa;
+import com.sistema.tgid.repository.EmpresaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
