@@ -1,7 +1,7 @@
-package com.sistema.tgid.service;
+package com.sistema.tgiddesafio.service;
 
-import com.sistema.tgid.domain.Empresa;
-import com.sistema.tgid.repository.EmpresaRepository;
+import com.sistema.tgiddesafio.domain.Empresa;
+import com.sistema.tgiddesafio.repository.EmpresaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,10 +33,9 @@ public class EmpresaService {
         Empresa empresa = empresaRepository.findById(idEmpresa)
                 .orElseThrow(() -> new IllegalArgumentException("Empresa não encontrada"));
 
-        double novoSaldo =  empresa.getSaldo() + valor;
+        double novoSaldo = empresa.getSaldo() + valor;
         empresa.setSaldo(novoSaldo);
-
         empresaRepository.save(empresa);
-
     }
+
 }

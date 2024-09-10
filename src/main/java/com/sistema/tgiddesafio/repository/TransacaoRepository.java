@@ -1,6 +1,6 @@
-package com.sistema.tgid.repository;
+package com.sistema.tgiddesafio.repository;
 
-import com.sistema.tgid.domain.Transacao;
+import com.sistema.tgiddesafio.domain.Transacao;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TransacaoRepository extends JpaRepository<Transacao, Long> {

@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.sistema</groupId>
-    <artifactId>tgid</artifactId>
+    <artifactId>tgiddesafio</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>transacoes</name>
     <description>Sistema de transacoes com springboot</description>

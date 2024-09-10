@@ -1,7 +1,7 @@
-package com.sistema.tgid.controller;
+package com.sistema.tgiddesafio.controller;
 
-import com.sistema.tgid.domain.Empresa;
-import com.sistema.tgid.service.EmpresaService;
+import com.sistema.tgiddesafio.domain.Empresa;
+import com.sistema.tgiddesafio.service.EmpresaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

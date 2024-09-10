@@ -1,4 +1,4 @@
-package com.sistema.tgid;
+package com.sistema.tgiddesafio;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

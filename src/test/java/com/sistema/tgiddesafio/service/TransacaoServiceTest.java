@@ -1,9 +1,9 @@
-package com.sistema.tgid.service;
+package com.sistema.tgiddesafio.service;
 
-import com.sistema.tgid.domain.Cliente;
-import com.sistema.tgid.domain.Empresa;
-import com.sistema.tgid.domain.Transacao;
-import com.sistema.tgid.repository.TransacaoRepository;
+import com.sistema.tgiddesafio.domain.Cliente;
+import com.sistema.tgiddesafio.domain.Empresa;
+import com.sistema.tgiddesafio.domain.Transacao;
+import com.sistema.tgiddesafio.repository.TransacaoRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

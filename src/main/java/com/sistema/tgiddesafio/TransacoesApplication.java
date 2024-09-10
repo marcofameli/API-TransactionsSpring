@@ -1,4 +1,4 @@
-package com.sistema.tgid;
+package com.sistema.tgiddesafio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

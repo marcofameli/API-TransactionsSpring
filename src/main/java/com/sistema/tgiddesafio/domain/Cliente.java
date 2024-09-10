@@ -1,4 +1,4 @@
-package com.sistema.tgid.domain;
+package com.sistema.tgiddesafio.domain;
 
 import jakarta.persistence.*;
 

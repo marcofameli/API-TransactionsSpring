@@ -1,4 +1,4 @@
-package com.sistema.tgid.domain;
+package com.sistema.tgiddesafio.domain;
 
 import jakarta.persistence.*;
 
@@ -83,4 +83,5 @@ public class Empresa {
     public int hashCode() {
         return Objects.hash(cnpj, nome, saldo, taxa);
     }
+
 }

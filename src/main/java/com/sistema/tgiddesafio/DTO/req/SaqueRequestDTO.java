@@ -1,6 +1,6 @@
-package com.sistema.tgid.DTO.req;
+package com.sistema.tgiddesafio.DTO.req;
 
-public class DepositoRequestDTO {
+public class SaqueRequestDTO {
     private Long empresaId;
     private Long clienteId;
     private double valor;

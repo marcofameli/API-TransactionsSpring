@@ -1,11 +1,12 @@
-package com.sistema.tgid.service;
+package com.sistema.tgiddesafio.service;
 
-import com.sistema.tgid.domain.Cliente;
-import com.sistema.tgid.domain.Empresa;
-import com.sistema.tgid.domain.Transacao;
-import com.sistema.tgid.repository.TransacaoRepository;
+import com.sistema.tgiddesafio.domain.Cliente;
+import com.sistema.tgiddesafio.domain.Empresa;
+import com.sistema.tgiddesafio.domain.Transacao;
+import com.sistema.tgiddesafio.repository.TransacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
 
@@ -13,10 +14,14 @@ import java.time.LocalDateTime;
 public class TransacaoService {
     @Autowired
     private TransacaoRepository transacaoRepository;
+
     @Autowired
     private EmpresaService empresaService;
+
     @Autowired
     private ClienteService clienteService;
+
+    private final RestTemplate restTemplate = new RestTemplate();
 
     public Transacao realizarDeposito(Empresa empresa, Cliente cliente, double valor) {
         double taxa = empresa.getTaxa();
@@ -43,7 +48,9 @@ public class TransacaoService {
 
         empresaService.atualizarSaldo(empresa.getId(), -valor);
         clienteService.atualizarSaldo(cliente.getId(), -valor);
+
         return transacao;
     }
+
 
 }

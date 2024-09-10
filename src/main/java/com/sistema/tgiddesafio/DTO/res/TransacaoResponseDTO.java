@@ -1,4 +1,4 @@
-package com.sistema.tgid.DTO.res;
+package com.sistema.tgiddesafio.DTO.res;
 
 import java.time.LocalDateTime;
 
