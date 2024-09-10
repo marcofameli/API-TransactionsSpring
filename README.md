@@ -17,7 +17,7 @@ O desafio consiste em criar um sistema de transações entre clientes e empresas
 
 ## Aplicação / Funcionalidade
 - Gestão de saldo na empresa e cliente (Service).
-- Transações na `TransacaoService`.
+- Transações e Callback na `TransacaoService`.
 - Tratamento de erros na lógica de negócio.
 
 ## Endpoints
