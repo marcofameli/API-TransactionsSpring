@@ -5,6 +5,7 @@ import com.sistema.tgiddesafio.domain.Empresa;
 import com.sistema.tgiddesafio.domain.Transacao;
 import com.sistema.tgiddesafio.repository.TransacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -35,6 +36,10 @@ public class TransacaoService {
         empresaService.atualizarSaldo(empresa.getId(), valorFinal);
         clienteService.atualizarSaldo(cliente.getId(), valorFinal);
 
+        enviarCallback(transacao);
+
+        notificarCliente(cliente.getEmail(), transacao);
+
         return transacao;
     }
 
@@ -49,8 +54,29 @@ public class TransacaoService {
         empresaService.atualizarSaldo(empresa.getId(), -valor);
         clienteService.atualizarSaldo(cliente.getId(), -valor);
 
+        enviarCallback(transacao);
+
+        notificarCliente(cliente.getEmail(), transacao);
+
         return transacao;
     }
+    private void enviarCallback(Transacao transacao) {
+        String callbackUrl = "https://webhook.site/32fb7a9a-8c74-4fa4-91de-f9c89499c12e"; // Substitua pela URL do webhook
 
+        try {
+            ResponseEntity<String> response = restTemplate.postForEntity(callbackUrl, transacao, String.class);
+            if (response.getStatusCode().is2xxSuccessful()) {
+                System.out.println("Callback enviado com sucesso!");
+            } else {
+                System.err.println("Erro ao enviar callback: " + response.getStatusCode());
+            }
+        } catch (Exception e) {
+            System.err.println("Erro ao enviar callback: " + e.getMessage());
+        }
+    }
+
+    private void notificarCliente(String email, Transacao transacao) {
+        System.out.println("Notificando cliente " + email + " sobre a transação: " + transacao);
+    }
 
 }
