@@ -1,6 +1,4 @@
-# Desafio da TGID (Transform and Grow in Digital)
-
-O desafio consiste em criar um sistema de transações entre clientes e empresas.
+O projeto consiste em criar um sistema de transações entre clientes e empresas.
 
 ## Tecnologias Usadas
 - **Java 21**
