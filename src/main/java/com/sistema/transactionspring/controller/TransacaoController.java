@@ -1,14 +1,14 @@
-package com.sistema.tgiddesafio.controller;
+package com.sistema.transactionspring.controller;
 
-import com.sistema.tgiddesafio.DTO.req.DepositoRequestDTO;
-import com.sistema.tgiddesafio.DTO.req.SaqueRequestDTO;
-import com.sistema.tgiddesafio.DTO.res.TransacaoResponseDTO;
-import com.sistema.tgiddesafio.domain.Cliente;
-import com.sistema.tgiddesafio.domain.Empresa;
-import com.sistema.tgiddesafio.domain.Transacao;
-import com.sistema.tgiddesafio.service.ClienteService;
-import com.sistema.tgiddesafio.service.EmpresaService;
-import com.sistema.tgiddesafio.service.TransacaoService;
+import com.sistema.transactionspring.DTO.req.DepositoRequestDTO;
+import com.sistema.transactionspring.DTO.req.SaqueRequestDTO;
+import com.sistema.transactionspring.DTO.res.TransacaoResponseDTO;
+import com.sistema.transactionspring.domain.Cliente;
+import com.sistema.transactionspring.domain.Empresa;
+import com.sistema.transactionspring.domain.Transacao;
+import com.sistema.transactionspring.service.ClienteService;
+import com.sistema.transactionspring.service.EmpresaService;
+import com.sistema.transactionspring.service.TransacaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

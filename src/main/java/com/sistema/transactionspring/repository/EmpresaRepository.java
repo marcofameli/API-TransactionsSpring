@@ -1,6 +1,6 @@
-package com.sistema.tgiddesafio.repository;
+package com.sistema.transactionspring.repository;
 
-import com.sistema.tgiddesafio.domain.Empresa;
+import com.sistema.transactionspring.domain.Empresa;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EmpresaRepository extends JpaRepository<Empresa, Long> {

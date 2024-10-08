@@ -1,4 +1,4 @@
-package com.sistema.tgiddesafio;
+package com.sistema.transactionspring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

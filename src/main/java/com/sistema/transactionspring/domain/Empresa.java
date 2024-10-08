@@ -1,4 +1,4 @@
-package com.sistema.tgiddesafio.domain;
+package com.sistema.transactionspring.domain;
 
 import jakarta.persistence.*;
 

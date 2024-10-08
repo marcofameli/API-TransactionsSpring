@@ -1,4 +1,4 @@
-package com.sistema.tgiddesafio.DTO.res;
+package com.sistema.transactionspring.DTO.res;
 
 import java.time.LocalDateTime;
 

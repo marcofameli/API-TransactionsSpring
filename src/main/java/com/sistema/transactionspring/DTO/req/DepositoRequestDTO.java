@@ -1,4 +1,4 @@
-package com.sistema.tgiddesafio.DTO.req;
+package com.sistema.transactionspring.DTO.req;
 
 public class DepositoRequestDTO {
     private Long empresaId;

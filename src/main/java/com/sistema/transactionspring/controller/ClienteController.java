@@ -1,7 +1,7 @@
-package com.sistema.tgiddesafio.controller;
+package com.sistema.transactionspring.controller;
 
-import com.sistema.tgiddesafio.domain.Cliente;
-import com.sistema.tgiddesafio.service.ClienteService;
+import com.sistema.transactionspring.domain.Cliente;
+import com.sistema.transactionspring.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

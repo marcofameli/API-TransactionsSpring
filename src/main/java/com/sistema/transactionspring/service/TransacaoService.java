@@ -1,9 +1,9 @@
-package com.sistema.tgiddesafio.service;
+package com.sistema.transactionspring.service;
 
-import com.sistema.tgiddesafio.domain.Cliente;
-import com.sistema.tgiddesafio.domain.Empresa;
-import com.sistema.tgiddesafio.domain.Transacao;
-import com.sistema.tgiddesafio.repository.TransacaoRepository;
+import com.sistema.transactionspring.domain.Cliente;
+import com.sistema.transactionspring.domain.Empresa;
+import com.sistema.transactionspring.domain.Transacao;
+import com.sistema.transactionspring.repository.TransacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
